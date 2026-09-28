@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: eami
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: MPLBACKEND
+        value: Agg
